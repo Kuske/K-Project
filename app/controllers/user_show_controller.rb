@@ -1,0 +1,2 @@
+class UserShowController < ApplicationController
+end
