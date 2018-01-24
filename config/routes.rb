@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'user_show/admin1'
-  get 'user_show/admin2'
+  get'/show/:username'=>'user_show#show'
   root'application#justsayinghello'
 end

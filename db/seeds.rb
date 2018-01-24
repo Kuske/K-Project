@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+@user=User.new
+@user.userid=0
+@user.username="admin1"
+@user.comment='Say hello to K-Project'
+@user.save
