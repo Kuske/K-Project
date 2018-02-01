@@ -5,10 +5,12 @@ class UserShowController < ApplicationController
   end
   def signup
     @user=User.new
-    if @user.save
-     redirect_to "show/0",notice:"completed."
-    else
-      render "/user_show/signup"
-    end
+    #render "/user_show/signup"
+  end
+  def update
+    @user=User.new(params.require(:user).permit(:username,:comment,:userid))
+    @user.save
+    @user.save
+    redirect_to "/show/%d" %[@user[:userid]]
   end
 end
