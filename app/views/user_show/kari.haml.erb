@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+<%= form_for @user,:url => {:controller => 'user_show', :action => 'update'} do |f|%>
+  <link rel="stylesheet" href="signup.css">
+  <html>
+    <head>
+      <title>Practice</title>
+    </head>
+
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+      <i class="material-icons">add</i>
+    </button>
+
+    <body>
+      <h1 class="Titlestr">Sign up</h1>
+      <h2 class="Titlestr">さようなら世界</h2>
+      <h3 class="Titlestr">~ この世の終わりに名前を残す ~</h3>
+      <div class="box">
+        <div class="Impact">Input Your Name</div>
+        <center>
+          <td>
+          </br>
+            <!--<input type="text" name="InputName" size="30" maxlength="20"></input>-->
+            <%=f.text_field :username, :size=>"30"%>
+          </td>
+        </center>
+      </div>
+
+      <br>
+
+      <div class="box">
+        <div class="Impact">Write about yourself</div>
+        <center>
+          <td class="center">
+            <!--<input type="text" name="InputComment" size="20" maxlength="100"></input>-->
+          </br>
+            <%=f.text_area :comment, :size=>"70x3"%></br>
+            <%=f.text_field :userid,:size=>20 %>
+          </td>
+        </center>
+      </div>
+      <%=f.submit "登録"%>
+    </body>
+  </html>
+<%end%>

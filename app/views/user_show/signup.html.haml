@@ -1,0 +1,26 @@
+%link{:rel => 'stylesheet', :href => 'https://fonts.googleapis.com/icon?family=Material+Icons'}
+%link{:rel => 'stylesheet', :href => 'https://code.getmdl.io/1.3.0/material.indigo-pink.min.css'}
+%script{:defer=>'defer',:src=>'https://code.getmdl.io/1.3.0/material.min.js'}
+%link{:rel=>'stylesheet',:href=>'kari.css'}
+%html
+= form_for @user, :url => {:controller => 'user_show', :action => 'update'} do |f|
+  .md1-containerflex
+    .md1-containerflex.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+      = f.text_field :username,:class=>'mdl-textfield__input',:type => "text",:id=>'un'
+      %label{:class=>'mdl-textfield__label'} Username...
+    %br
+    .md1-containerflex.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+      = f.text_field :comment,:class=>'mdl-textfield__input',:type => "text",:id=>'co'
+      %label{:class=>'mdl-textfield__label'} Comment...
+    %br
+    .md1-containerflex.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+      = f.text_field :userid,:class=>"mdl-textfield__input", :type=>"text", :pattern=>"-?[0-9]*(\.[0-9]+)?",:id=>'ui'
+      %label{:class=>'mdl-textfield__label'} Userid...
+    %br
+      = f.submit 'Sign up',:class=>'mdl-button.mdl-js-button mdl-button--raised'
+    /= f.text_field :username, :size=>'30'
+    /= f.text_area :comment, :size=>
+  /<%=f.text_field :username, :size=>"30"%>
+  /<%=f.text_area :comment, :size=>"70x3"%></br>
+  /<%=f.text_field :userid,:size=>20 %>
+  /<%=f.submit "登録"%>
