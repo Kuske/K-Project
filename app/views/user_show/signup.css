@@ -1,7 +1,9 @@
 body{
     position: relative;
-    background-color: #b0bec5;
+    // background-color: #b0bec5;
+    background: radial-gradient(#FFFFFF, #d56d2b);
 }
+
 .demo-card-wide {
   height: 200px;
  // outline: limegreen 10px solid;
