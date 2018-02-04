@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'user_show/admin1'
-  get 'user_show/admin2'
-  root'application#justsayinghello'
+  resources :users
+  post 'user_show/update'=>'user_show#update'
+  get'/show/:userid'=>'user_show#show'
+  get'/signup'=>'user_show#signup'
+  get '/home'=>'home#initial'
+  root 'home#initial'
 end
