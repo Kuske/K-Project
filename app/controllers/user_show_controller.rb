@@ -13,7 +13,7 @@ class UserShowController < ApplicationController
       break if !User.find_by(userid:i)
       i+=1
     end
-    @user=User.new(params.require(:user).permit(:username,:comment,i))
+    @user=User.new(params.require(:user).permit(:username,:comment,:password,:password_confirmation))
     @user[:userid]=i
     @user.save
     redirect_to "/show/%d" %[@user[:userid]]

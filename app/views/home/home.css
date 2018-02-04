@@ -1,0 +1,41 @@
+.picture-layout-transparent {
+  /*  background: url('/images/Senses-EP.jpg')center/cover;
+*/
+}
+
+.mdl-layout__header {
+  height: 7%;
+  background-color: #000000;
+}
+
+.titletext {
+  height: 800px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inlinetitletext {
+  font-size: 400%;
+  text-align: center;
+  font-weight: bolder;
+  color: #000000;
+}
+
+.subtitletext {
+  font-size: 200%;
+  font-weight: bolder;
+  color: #000000;
+}
+
+.rightbar {
+  font-size: 100%;
+}
+
+.leftbar {
+  font-size: 100%;
+}
+
+.title_fontsize {
+  /*SpiderChatの部分のフォントサイズを変える*/
+  /*font-size: 180%;*/
+}

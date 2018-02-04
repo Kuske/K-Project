@@ -5,6 +5,27 @@
 %link{:rel => 'stylesheet', :href => 'https://code.getmdl.io/1.3.0/material.indigo-pink.min.css'}
 %script{:defer=>'defer',:src=>'https://code.getmdl.io/1.3.0/material.min.js'}
 %link{:rel=>'stylesheet',:href=>'home.css'}
-%html
-  %body
-    Yo wazzzzzzup
+%body
+.picture-layout-transparent.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+  .mdl-layout__header.mdl-layout__header-row
+    .mdl-layout-title.title_fontsize
+      SpiderChat
+    .mdl-layout-spacer
+    .mdl-navigation.mdl-layout--large-screen-only
+      %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000"} Home
+      %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/show/0"} Profile
+      %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/signup"} Signup
+
+  .mdl-layout__drawer
+    .mdl-layout-title Menu
+    .mdl-navigation
+      %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000"} Home
+      %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/show/0"} Profile
+      %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/signup"} Signup
+
+  %main{:class=>'mdl-layout__content' }
+    .page-content
+      .titletext
+        .inlinetitletext Just Give Me Your Coding Skills.
+        %br
+        .subtitletext お前のコーディングスキルをくれ。
