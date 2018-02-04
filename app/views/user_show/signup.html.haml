@@ -24,11 +24,11 @@
             %label{:class=>'mdl-textfield__label'} Comment...
           %br
           .mdl-containerflex.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-            = f.password_field :password,:class=>'mdl-textfield__input',:type => "text",:minlength=>'6',:maxlength=>'30'
+            = f.password_field :password,:class=>'mdl-textfield__input',:type => "password",:minlength=>'6',:maxlength=>'30'
             %label{:class=>'mdl-textfield__label'} Password...
           %br
           .mdl-containerflex.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-            = f.password_field :password_confirmation,:class=>'mdl-textfield__input',:type => "text",:minlength=>'6',:maxlength=>'30'
+            = f.password_field :password_confirmation,:class=>'mdl-textfield__input',:type => "password",:minlength=>'6',:maxlength=>'30'
             %label{:class=>'mdl-textfield__label'} Password Confirmation...
           %br
           = f.submit 'Sign up',:class=>'mdl-button.mdl-js-button mdl-button--raised'
