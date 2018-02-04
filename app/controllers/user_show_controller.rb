@@ -8,8 +8,13 @@ class UserShowController < ApplicationController
     #render "/user_show/signup"
   end
   def update
-    @user=User.new(params.require(:user).permit(:username,:comment,:userid))
-    @user.save
+    i=0
+    while i<1e6
+      break if !User.find_by(userid:i)
+      i+=1
+    end
+    @user=User.new(params.require(:user).permit(:username,:comment,i))
+    @user[:userid]=i
     @user.save
     redirect_to "/show/%d" %[@user[:userid]]
   end
