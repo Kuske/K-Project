@@ -5,8 +5,23 @@ class UserShowController < ApplicationController
   end
   def signup
     @user=User.new
-    #render "/user_show/signup"
   end
+
+  def login
+    @user=User.new
+    render"/user_show/login"
+  end
+
+  def logincheck
+    user=User.find_by(username: params[:username])#Search the user that has that username
+    puts user[:username]
+    if(user && user.authenticate(user[:password]))
+      redirect_to "/show/%d" %[@user[:userid]]
+    else
+      login
+    end
+  end
+
   def update
     i=0
     while i<1e6
@@ -17,5 +32,8 @@ class UserShowController < ApplicationController
     @user[:userid]=i
     @user.save
     redirect_to "/show/%d" %[@user[:userid]]
+  end
+  def user_params
+   params.require(:user).permit(:name, :comment, :password, :password_confirmation)
   end
 end
