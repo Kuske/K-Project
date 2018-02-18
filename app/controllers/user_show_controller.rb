@@ -7,6 +7,9 @@ class UserShowController < ApplicationController
     @user=User.new
   end
 
+  def current_user_return
+    return current_user
+  end
   def login
     @user=User.new
     render"/user_show/login"
@@ -16,6 +19,7 @@ class UserShowController < ApplicationController
     user=User.find_by(username: params[:username])#Search the user that has that username
     puts user[:username]
     if(user && user.authenticate(user[:password]))
+      log_in(user)
       redirect_to "/show/%d" %[@user[:userid]]
     else
       login
