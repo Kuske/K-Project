@@ -1,0 +1,15 @@
+current directory: /home/keidaroo/work/K-Project/path/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+/home/keidaroo/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180203-15209-d3qync.rb extconf.rb
+creating Makefile
+
+current directory: /home/keidaroo/work/K-Project/path/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /home/keidaroo/work/K-Project/path/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: /home/keidaroo/work/K-Project/path/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20180203-15209-bmp465/bindex
