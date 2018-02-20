@@ -1,6 +1,6 @@
 module UserShowHelper
   def log_in(user)
-    session[:user_id]=user.id
+    session[:user_id]=@idnum
   end
 
   def current_user

@@ -21,6 +21,7 @@ class UserShowController < ApplicationController
     puts "World"
     usernow=User.find_by(username: params[:user][:username])#Search the user that has that username
     if(usernow && usernow.authenticate(params[:user][:password]))
+      @idnum=usernow[:userid]
       log_in(usernow)
       redirect_to "/show/%d" %[usernow[:userid]]
     else
