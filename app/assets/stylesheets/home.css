@@ -2,12 +2,16 @@
   /*  background: url('/images/Senses-EP.jpg')center/cover;
 */
 }
-
+body{
+  background-color: #aa6a0a;
+}
 .mdl-layout__header {
   height: 7%;
-  background-color: #000000;
+  background-color: #090909;
 }
-
+.mdl-layout__content{
+    background-color: #a6d9d0;
+}
 .titletext {
   height: 800px;
   display: table-cell;

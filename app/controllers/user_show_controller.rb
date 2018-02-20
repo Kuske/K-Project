@@ -16,13 +16,15 @@ class UserShowController < ApplicationController
   end
 
   def logincheck
-    user=User.find_by(username: params[:username])#Search the user that has that username
-    puts user[:username]
-    if(user && user.authenticate(user[:password]))
-      log_in(user)
-      redirect_to "/show/%d" %[@user[:userid]]
+    puts "hello"
+    puts params[:user][:username]
+    puts "World"
+    usernow=User.find_by(username: params[:user][:username])#Search the user that has that username
+    if(usernow && usernow.authenticate(params[:user][:password]))
+      log_in(usernow)
+      redirect_to "/show/%d" %[usernow[:userid]]
     else
-      login
+      redirect_to"/login"
     end
   end
 

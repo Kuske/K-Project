@@ -4,30 +4,31 @@
 %link{:rel => 'stylesheet', :href => 'https://fonts.googleapis.com/icon?family=Material+Icons'}
 %link{:rel => 'stylesheet', :href => 'https://code.getmdl.io/1.3.0/material.indigo-pink.min.css'}
 %script{:defer=>'defer',:src=>'https://code.getmdl.io/1.3.0/material.min.js'}
-%link{:rel=>'stylesheet',:href=>'home.css'}
+/%link{:rel=>'stylesheet',:href=>'app/assets/stylesheets/home.css'}
+= stylesheet_link_tag "home", :media => "all"
 %body
-.picture-layout-transparent.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-  .mdl-layout__header.mdl-layout__header-row
-    .mdl-layout-title.title_fontsize
-      SpiderChat
-    .mdl-layout-spacer
-    .mdl-navigation.mdl-layout--large-screen-only
-      %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000"} Home
-      - userid= current_user
-      %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/show/#{userid}"} Profile
-      %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/signup"} Signup
-      %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/login"} Login
-  .mdl-layout__drawer
-    .mdl-layout-title Menu
-    .mdl-navigation
-      %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000"} Home
-      %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/show/0"} Profile
-      %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/signup"} Signup
-      %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/login"} Login
+  .picture-layout-transparent.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+    .mdl-layout__header.mdl-layout__header-row
+      .mdl-layout-title.title_fontsize
+        SpiderChat
+      .mdl-layout-spacer
+      .mdl-navigation.mdl-layout--large-screen-only
+        %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000"} Home
+        - userid= current_user
+        %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/show/#{userid}"} Profile
+        %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/signup"} Signup
+        %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/login"} Login
+    .mdl-layout__drawer
+      .mdl-layout-title Menu
+      .mdl-navigation
+        %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000"} Home
+        %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/show/0"} Profile
+        %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/signup"} Signup
+        %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/login"} Login
 
-  %main{:class=>'mdl-layout__content' }
-    .page-content
-      .titletext
-        .inlinetitletext Just Give Me Your Coding Skills.
-        %br
-        .subtitletext お前のコーディングスキルをくれ。
+    %main{:class=>'mdl-layout__content' }
+      .page-content
+        .titletext
+          .inlinetitletext Just Give Me Your Coding Skills.
+          %br
+          .subtitletext お前のコーディングスキルをくれ。
