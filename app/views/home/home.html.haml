@@ -14,16 +14,20 @@
       .mdl-layout-spacer
       .mdl-navigation.mdl-layout--large-screen-only
         %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000"} Home
-        %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/show/#{@userid}"} Profile
-        %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/signup"} Signup
-        %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/login"} Login
+        -if @userid!=nil
+          %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/show/#{@userid}"} Profile
+        -else
+          %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/signup"} Signup
+          %a{:class=>'mdl-navigation__link rightbar',:href=>"http://localhost:3000/login"} Login
     .mdl-layout__drawer
       .mdl-layout-title Menu
       .mdl-navigation
         %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000"} Home
-        %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/show/0"} Profile
-        %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/signup"} Signup
-        %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/login"} Login
+        -if @userid!=nil
+          %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/show/0"} Profile
+        -else
+          %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/signup"} Signup
+          %a{:class=>'mdl-navigation__link leftbar',:href=>"http://localhost:3000/login"} Login
 
     %main{:class=>'mdl-layout__content' }
       .page-content
