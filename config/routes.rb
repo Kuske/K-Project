@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'messages/new'
+
   resources :users
   post 'user_show/update'=>'user_show#update'
   post 'user_show/logincheck'=>'user_show#logincheck'
