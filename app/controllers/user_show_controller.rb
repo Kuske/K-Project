@@ -7,9 +7,6 @@ class UserShowController < ApplicationController
     @user=User.new
   end
 
-  def current_user_return
-    return current_user
-  end
   def login
     @user=User.new
     render"/user_show/login"
