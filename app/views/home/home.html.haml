@@ -21,8 +21,7 @@
             %a.nav-link{:href=>"http://localhost:3000"} Home
           -if @userid!=nil
             %li.nav-item
-              %a.nav-link{:href=>"http://localhost:3000/show/#{@userid}"}
-              My Account
+              %a.nav-link{:href=>"http://localhost:3000/show/#{@userid}"}My Account
           -else
             %li.nav-item
               %a.nav-link{:href=>"http://localhost:3000/signup"} Signup

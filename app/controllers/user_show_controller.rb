@@ -22,7 +22,7 @@ class UserShowController < ApplicationController
     usernow = User.find_by(username: params[:user][:username]) # Search the user that has that username
     if usernow && usernow.authenticate(params[:user][:password])
       @idnum = usernow[:userid]
-      log_in(usernow)
+      log_in usernow
       redirect_to format('/show/%d', usernow[:userid])
     else
       redirect_to '/login'
@@ -38,6 +38,7 @@ class UserShowController < ApplicationController
     @user = User.new(params.require(:user).permit(:username, :comment, :password, :password_confirmation))
     @user[:userid] = i
     @user.save
+    log_in @user
     redirect_to format('/show/%d', @user[:userid])
   end
 

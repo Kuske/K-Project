@@ -1,9 +1,9 @@
 module UserShowHelper
   def log_in(user)
-    session[:user_id]=@idnum
+    session[:user_id] = user.userid
   end
 
   def current_user
-    @current_user ||=User.find_by(id:session[:user_id])
+    @current_user ||= User.find_by(id: session[:user_id])
   end
 end
