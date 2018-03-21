@@ -1,10 +1,12 @@
 body {
-  position: relative; // background-color: #b0bec5;
-  background: radial-gradient(#9e46d4, #491594);
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .demo-card-wide {
-  height: 200px; // outline: limegreen 10px solid;
+  height: 30vh;
+  width: 30vw;
 }
 
 .demo-card-wide>.mdl-card__title {
@@ -13,14 +15,9 @@ body {
   background-color: indigo;
 }
 
-.demo-card-wide.mdl-card {
-  width: 450px;
-  height: 450px;
-}
-
 .mdl-card__title-text {
   position: relative;
-  top: 6px;
+  font-size: 2rem;
 }
 
 .mdl-card {
@@ -36,6 +33,6 @@ body {
   bottom: 0;
   left: 0;
   margin: auto;
-  width: 30%;
-  height: 50%;
+  height: 100%;
+  width: 100%;
 }
